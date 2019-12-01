@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- <link rel="stylesheet" href="../static/css/mystyle.css" th:href="@{/css/mystyle.css}"> -->
+</head>
+<body>
+	<label th:text="${companyName}"></label>
+	<table border="2px solid black">
+		<thead>
+			<td>Product Id</td>
+			<td>Name</td>
+			<td>Price</td>
+			<td>barcode</td>
+			<td>Expiry Date</td>
+		</thead>
+
+		<tr th:each="product: ${products}">
+			<td th:text="${product.id}"></td>
+			<td th:text="${product.productName}"></td>
+			<td th:text="${product.productPrice}"></td>
+			<td th:text="${product.barcode}"></td>
+			<td th:text="${product.expDate}"></td>
+		</tr>
+		
+
+	</table>
+</body>
+</html>

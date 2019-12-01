@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+	<table border="2px solid black">
+		<thead>
+			<td>User Id</td>
+			<td>Name</td>
+			<td>Contact</td>
+			<td>Email</td>
+			<td>Address</td>
+		</thead>
+
+		<tr th:each="user: ${users}">
+			<td th:text="${user.userId}"></td>
+			<td th:text="${user.userName}"></td>
+			<td th:text="${user.userContact}"></td>
+			<td th:text="${user.userEmail}"></td>
+			<td th:text="${user.userAddress}"></td>
+		</tr>
+
+	</table>
+</body>
+</html>
